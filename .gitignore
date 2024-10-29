@@ -1,0 +1,4 @@
+/django_env
+.rest
+db.sqlite3
+.env

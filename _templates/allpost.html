@@ -1,0 +1,19 @@
+{% extends "_mybase.html" %}
+
+{% block title %} Allblogs{% endblock  %} 
+
+{{name}}
+{% block body %} 
+
+{% for blog in blogs%}
+<div class="px-8 py-6">
+    <img class ="mb-6" src="{{blog.post_image}}" alt="">
+
+    <!-- <p>{{blog.id}}</p> -->
+    <a class="hover: text-grey-400" href="{% url 'get-blog' blog.id %}"><h1 class="text-4xl text-gray" >{{blog.post_title}}</h1></a>
+    <p class="mb-2">{{blog.post_body| truncatechars:100}}</p>
+</div>
+
+{% endfor %}
+
+{% endblock  %} 

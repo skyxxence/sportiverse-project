@@ -1,0 +1,37 @@
+CRUD operaion
+create : POST request
+read : GET request
+update: PUT request and PATCH request
+delete: DELETE request
+
+
+assignment 
+what is the diff btw PUT and PATCH
+different http status code
+create comment and image app
+
+
+
+
+MVT architecture
+model -how your database is going to look
+
+{Route/URL}
+View: - 
+    accepts incoming request 
+    apply some logic e.g fetching a record from the db abd sorting it
+    sends a request to the user
+Template: - displays the html
+
+
+steps
+django-admin startproject project_name
+ python manage.py startapp create_post
+ register the app in settings
+ python manage.py runserver
+
+
+ assignment
+
+ create 3 views and 5 templates(footer,naver and 3 other templates)
+

@@ -1,0 +1,20 @@
+<header class="bg-gray-800 p-4">
+
+    <nav >
+
+        <img src="https://drive.google.com/file/d/108ojUxdCenpBm4nTLfSa4ieA1tQpY_RZ/view?usp=drive_link" alt="sportverse">
+        <ul class = "flex space-x-6 text-white">
+        <li><a class="hover:text-orange-600" href="{% url 'go-home' %}">Home</a></li>
+        <li><a class= "hover:text-orange-600" href="{% url 'create-blog' %}">Create Blog</a></li>
+        <li><a class= "hover:text-orange-600" href="{% url 'get-all' %}">Read Blog</a></li>
+        {%if user.is_authenticated%}
+            <form class= "hover:text-orange-600 cursor-pointer" action="{% url 'log-out' %}" method = post>
+                {%csrf_token%}
+                <input type="submit" value="Logout"/>
+            </form>
+        {% else %}
+        <li><a class= "hover:text-orange-600" href="{% url 'go-login' %}">Login</a></li>
+        {%endif%}
+        </ul>
+    </nav>
+</header>
